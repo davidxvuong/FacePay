@@ -6,6 +6,9 @@ var takePhoto  = null;
 var outputDiv = null;
 var width = 300;
 var height = 300;
+var API_KEY = "5305005f8dd2426696adedfb6b159da1";
+var API_SECRET = "325e64602e874234af4d833e073e6f99";
+
 
 function initialize() {
 	var streaming  = false;
@@ -82,7 +85,7 @@ function takePicture() {
 	formData.append("imgData", data);
 
 	var newFile = new XMLHttpRequest();
-	newFile.addEventListener("load", performFaceTraining, false);
+	newFile.addEventListener("load", performFaceRecognition, false);
 	newFile.addEventListener("error", uploadError, false);
 	newFile.addEventListener("abort", uploadCancelled, false);
 	
@@ -90,8 +93,19 @@ function takePicture() {
 	newFile.send(formData);
 }
 
-function performFaceTraining(event) { 
+function performFaceRecognition(event) { 
 	console.log(event.target.responseText);
+
+	$.get("http://api.skybiometry.com/fc/faces/detect.json?api_key=" + API_KEY + "&api_secret=" + API_SECRET + "&urls=http://davidvuong.ca/BattleHackToronto/Client/registration/images/" + event.target.responseText, performFaceTraining);
+}
+
+function performFaceTraining(event) {
+	console.log(event);
+	//$.get("http://api.skybiometry.com/fc/tags/save.json?api_key=aa754b54b37&api_secret=4b3a4c6d4c&uid=mark@docs&tids=TEMP_F@0c95576847e9cd7123f1e304b1dcbe53_59ec9bb2ad15f_56.53_40.83_0_1", trainingComplete);
+}
+
+function trainingComplete(event) {
+
 }
 
 function uploadError(event) {
