@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
+    <script type="text/javascript" src="register.js"></script>
 </head>
 <body>
-    <section>
-        <form>
-            
-            Email <input type="email" name="email" required>
-        </form>
-    </section>
+    <form action="register.php">
+        <section>
+            Name <input type="text" name="name"> <br>
+            Email <input type="email" name="email" required> <br>
+            Address <input type="text" name="address"> <br>
+            Phone <input type="text" name="phone"> <br>
+            Credit Card Number <input type="text" name="card_number"> <br>
+            Expiration date<input type="month" name="date" placeholder="Month/Year"> <br>
+            Secure Code <input type="text" name="code"> <br>
+            <input type="submit" value="Register">
+        </section>
+        <section>
+
+        </section>
+       
+    </form>
 </body>
 </html>
