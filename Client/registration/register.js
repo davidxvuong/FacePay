@@ -8,7 +8,7 @@ var width = 300;
 var height = 300;
 var API_KEY = "5305005f8dd2426696adedfb6b159da1";
 var API_SECRET = "325e64602e874234af4d833e073e6f99";
-
+var uid;
 
 function initialize() {
 	var streaming  = false;
@@ -101,11 +101,16 @@ function performFaceRecognition(event) {
 
 function performFaceTraining(event) {
 	console.log(event);
-	//$.get("http://api.skybiometry.com/fc/tags/save.json?api_key=aa754b54b37&api_secret=4b3a4c6d4c&uid=mark@docs&tids=TEMP_F@0c95576847e9cd7123f1e304b1dcbe53_59ec9bb2ad15f_56.53_40.83_0_1", trainingComplete);
+	console.log(event.photos[0].tags[0].tid);
+	console.log(document.getElementById("name").value);
+	uid = document.getElementById("name").value + "@BattleHack";
+	console.log(uid);
+	$.get("http://api.skybiometry.com/fc/tags/save.json?api_key=" + API_KEY + "&api_secret=" + API_SECRET + "&uid=" + uid + "&tids=" + event.photos[0].tags[0].tid, trainingComplete);
 }
 
 function trainingComplete(event) {
 
+	document.getElementById("uid").value = uid;
 }
 
 function uploadError(event) {
