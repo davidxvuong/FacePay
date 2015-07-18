@@ -5,8 +5,8 @@
     <title>Register</title>
     <script type="text/javascript" src="register.js"></script>
 </head>
-<body>
-    <form action="register.php">
+<body onload = "initialize()">
+    <form action="register.php" method ="post">
         <section>
             Name <input type="text" name="name"> <br>
             Email <input type="email" name="email" required> <br>
@@ -14,11 +14,20 @@
             Phone <input type="text" name="phone"> <br>
             Credit Card Number <input type="text" name="card_number"> <br>
             Expiration date<input type="month" name="date" placeholder="Month/Year"> <br>
-            Secure Code <input type="text" name="code"> <br>
+            Secure Code <input type="text" name="code"><br>
+			User ID <input type="text" disabled><br>
             <input type="submit" value="Register">
         </section>
         <section>
-
+			<div class = "camera">
+				<video id ="video">Video not available.</video><br>
+				<button id ="takePhoto">Take Photo</button>
+			</div>
+			
+			<canvas id ="canvas" style ="display: none"></canvas>
+			<div id ="output" style = "display: none">
+				<img id ="photo"></img>
+			</div>
         </section>
        
     </form>
