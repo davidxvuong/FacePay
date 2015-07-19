@@ -43,21 +43,27 @@
 					</div>
 					
 					<div class="button-wrapper">
-						<input type="submit" value="REGISTER" class="center button">
+						<input type="submit" value="REGISTER" class="center button reg">
 						<input type="text" name = "uid" id = "uid" class="hide" required>
 					</div>
 					
 				</section>
 				<section class="right">
-					<div id = "camera">
-						<video id ="video">Video not available.</video><br>
-						<button id ="takePhoto" class="center">Take Photo</button>
-					</div>
-					
-					<canvas id ="canvas" style ="display: none"></canvas>
-					<div id ="output" style = "display: none">
-						<img id ="photo"></img>
-					</div>
+					<table>
+						<tr>
+						<td><video id ="video">Video not available.</video></td>
+						</tr>
+						<tr>
+						<td><button id ="takePhoto" class="center button pic">Take Photo</button></td>
+						</tr>
+						<tr>
+						<td><canvas id ="canvas" style ="display: none"></canvas></td>
+						</tr>
+						<tr>
+						<td><div id ="output" style = "display: none">
+						<img id ="photo"></img></td>
+						</tr>
+					</table>
 				</section>
 			</section>
 		    
