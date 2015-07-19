@@ -19,5 +19,12 @@ echo "It worked";
 
 $sql = 'INSERT INTO fpdb  (userName, email, adrs, pn, ccn, exp, cvn, uid) 
 VALUES ('.$name.', '.$email.', '.$address.', '.$phone.', '.$creditCardNumber.', '.$expDate.', '.$secureCode.', '.$uid.')';
-$conn->query($sql);
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
 ?>
