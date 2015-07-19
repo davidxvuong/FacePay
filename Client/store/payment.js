@@ -130,7 +130,7 @@ function recognizeCallback(data) {
 		queryServer.addEventListener("error", queryError, false);
 		queryServer.addEventListener("abort", queryCancelled, false);
 		
-		queryServer.open("GET", "queryDb.php");
+		queryServer.open("POST", "queryDb.php");
 		queryServer.send(serverParameters);
 	}
 	else {
