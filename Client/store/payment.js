@@ -119,7 +119,7 @@ function recognizeCallback(data) {
 	console.log(uid);
 	console.log(confidenceLvl);
 	
-	if (confidenceLvl >= 75) {
+	if (confidenceLvl >= 50) {
 		//query and proceed to next page
 		
 		var serverParameters = new FormData();
