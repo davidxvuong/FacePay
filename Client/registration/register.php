@@ -16,4 +16,5 @@ $uid = $_GET["uid"];
 $con = mysql_connect($server, $user, $pass) or die("Can't connect");
 mysql_select_db($dbname);
 echo "It worked";
+echo "Name: ".$name." email: ".$email." address: ".$address." phone ".$phone."credit card Number: ".$creditCardNumber." user ID".$uID;
 ?>
