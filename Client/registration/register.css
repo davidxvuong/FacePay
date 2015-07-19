@@ -42,14 +42,10 @@ body{
 
 .right{
 	float: right;
-	width: 50%;
-	padding-left: 5px;
+	width: 48%;
+	padding-left: 2%;
 	overflow: hidden;
 }
-
-	.right tr{
-		display: none;
-	}
 
 .center{
 	display:block;
