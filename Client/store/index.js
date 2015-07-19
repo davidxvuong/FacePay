@@ -1,4 +1,6 @@
 function proceedToPayment(item, price) {
-	console.log(item);
-	console.log(price);
+	sessionStorage.setItem("item", item);
+	sessionStorage.setItem("price", price);
+	
+	window.location.href ="payment.html";
 }
