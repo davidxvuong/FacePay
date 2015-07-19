@@ -42,6 +42,8 @@ function processPayment() {
 		if (evt.data.indexOf("Success") != -1) {
 			ws.close();
 			console.log("move to next window!");
+			sessionStorage.setItem("returnMsg", evt.data);
+			//move to next window
 		}
 		else {
 			console.log("Sending transaction info");
