@@ -4,12 +4,14 @@ body{
 }
 
 .main{
-	background-color: #6FC3DF;
+	background: linear-gradient(#0C141F, #01050A);
 	width:100%;
 	overflow: auto;
+	-webkit-box-shadow:0 0 30px #9CDAEF;
 }
 	.main table{
 		margin-top: 20px;
+		margin-bottom: 20px;
 		border-spacing: none;
 		width: 100%;
 		display:table;
@@ -23,6 +25,7 @@ body{
 		width: 100%;
 		border: none;
 		padding:5px;
+		border-radius: 1px;
 	}
 
 .content{
@@ -44,34 +47,68 @@ body{
 .center{
 	display:block;
 	margin:auto;
+	text-align: center;
+}
+
+.logo{
+	font-family: Helvetica, Geneva, sans-serif;
+	color: #E6FFFF;
+	font-size: 6em;
+	font-weight: 600;
+	padding-top: 20px;
+	text-shadow: -1px 0 #6FC3DF, 0 1px #6FC3DF,
+      1px 0 #6FC3DF, 0 -1px #6FC3DF;
+
+	background: -webkit-linear-gradient(#424C5B, #0C141F);
+	background: linear-gradient(#424C5B, #0C141F);
 }
 
 .logo img{
 	margin-top: 5%;
-	width:60%;
+	width:70%;
 }
 
 .button{
-	width:80%;
+	border-radius: 5px;
 	height: 50px;
 	border:none;
 	font-weight: 100;
 	font-size: 130%;
+	cursor: pointer;
 }
 	.button.reg{
-		background-color: #FFE64D;
+		background-color: #0C141F;
+		border: 2px solid #DF740C;
+		border-radius: 5px;
+		width:60%;
+		max-width: 420px;
 		color:white;
-		text-shadow: 1px 1px 1px #BDA40D; 
+		-webkit-box-shadow: 0 0 20px #DF740C;
+
 	}
+		input[type="submit"]:hover{
+			color:#FFE64D;
+			-webkit-box-shadow: 0 0 20px #FFE64D;
+			border: 2px solid #DF7B0C;
+			text-shadow: 1px 1px 1px #BDA40D; 
+
+		}
 	
 	.button.pic{
-		background-color: #4D6CA3;
-		color:white;
-		text-shadow: 1px 1px 1px #686473; 
+		width:55%;
+		border: 2px solid #424C5B;
+		background-color: #0C141F;
+		color:#E6FFFF;
+		text-shadow: 1px 1px 1px #3B3B3B; 
 	}
+		#takePhoto:hover{
+			background-color: #424C5B;
+		}
 	
 	.button-wrapper{
 		margin: 20px;
+		margin-top: 10%;
+
 	}
 
 .hide{
@@ -83,6 +120,19 @@ body{
    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
+input{
+	color: #686473;
+}
+	input:focus{
+		outline: none;
+		resize: none;
+	}
+
+
 #video{
 	margin-left: 20px;
+}
+
+.footer{
+	min-height: 50px;
 }
