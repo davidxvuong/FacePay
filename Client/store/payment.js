@@ -119,7 +119,7 @@ function recognizeCallback(data) {
 	console.log(uid);
 	console.log(confidenceLvl);
 	
-	if (confidenceLvl >= 50) {
+	if (confidenceLvl >= 60) {
 		//query and proceed to next page
 		
 		var serverParameters = new FormData();
@@ -136,6 +136,8 @@ function recognizeCallback(data) {
 	}
 	else {
 		//proceed to payment failure page
+		sessionStorage.setItem("returnMsg", "Failed");
+		window.location.href ="done.html";
 	}
 }
 
