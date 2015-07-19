@@ -5,7 +5,7 @@ var photo = null;
 var takePhoto  = null;
 var outputDiv = null;
 var width = 300;
-var height = 200;
+var height = 180;
 var API_KEY = "5305005f8dd2426696adedfb6b159da1";
 var API_SECRET = "325e64602e874234af4d833e073e6f99";
 var uid;
@@ -78,6 +78,7 @@ function takePicture() {
 	var data = canvas.toDataURL('image/png');
 	photo.setAttribute('src',data);
 
+	video.style.display = "none";
 	outputDiv.style.display = "block";
 	
 	var formData = new FormData();

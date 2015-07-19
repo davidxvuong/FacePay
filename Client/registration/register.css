@@ -37,12 +37,19 @@ body{
 .left{
 	float: left;
 	width: 50%;
+	overflow: hidden;
 }
 
 .right{
 	float: right;
 	width: 50%;
+	padding-left: 5px;
+	overflow: hidden;
 }
+
+	.right tr{
+		display: none;
+	}
 
 .center{
 	display:block;
@@ -96,6 +103,7 @@ body{
 	
 	.button.pic{
 		width:55%;
+		min-width: 155px;
 		border: 2px solid #424C5B;
 		background-color: #0C141F;
 		color:#E6FFFF;
