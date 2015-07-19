@@ -1,8 +1,8 @@
 <?php
-$server = '172.17.34.250';
-$user = 'root';
-$pass = '';
-$dbname = 'fpdb';
+$server = 'localhost';
+$user = 'davidvuo_battleh';
+$pass = 'test123';
+$dbname = 'davidvuo_BattleHack';
 
 $name = $_GET["name"];
 $email = $_GET["email"];
