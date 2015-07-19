@@ -1,8 +1,8 @@
 <?php
-$server = 'localhost';
-$user = 'davidvuo_battleh';
-$pass = 'test123';
-$dbname = 'davidvuo_BattleHack';
+$servername = 'localhost';
+$username = 'davidvuo_adrian';
+$password = 'Password123';
+$dbname = 'davidvuo_Battlehack';
 
 $name = $_GET["name"];
 $email = $_GET["email"];
@@ -13,18 +13,20 @@ $expDate = $_GET["date"];
 $secureCode = $_GET["code"];
 $uid = $_GET["uid"];
 
-$conn = mysql_connect($server, $user, $pass) or die("Can't connect");
-mysql_select_db($dbname);
-echo "It worked";
-
-$sql = 'INSERT INTO fpdb  (userName, email, adrs, pn, ccn, exp, cvn, uid) 
-VALUES ('.$name.', '.$email.', '.$address.', '.$phone.', '.$creditCardNumber.', '.$expDate.', '.$secureCode.', '.$uid.')';
-
-if ($conn->query($sql) === TRUE) {
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $sql = "INSERT INTO fpdb (userName, email, adrs, pn, ccn, exp, cvn, uid)
+    VALUES ('".$name."', '".$email."', '".$address."', '".$phone."', '".$creditCardNumber."', '".$expDate."', '".$secureCode."', '".$uid."')";
+    // use exec() because no results are returned
+    $conn->exec($sql);
     echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+    }
+catch(PDOException $e)
+    {
+    echo $sql . "<br>" . $e->getMessage();
+    }
 
-$conn->close();
+$conn = null;
 ?>
