@@ -3,34 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="register.js"></script>
+	<link rel="stylesheet" type="text/css" href="register.css">
+	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 </head>
 <body onload = "initialize()">
-    <form action="register.php" method ="post">
-        <section>
-            Name <input type="text" name="name" id = "name"> <br>
-            Email <input type="email" name="email" required> <br>
-            Address <input type="text" name="address" id = "hello"> <br>
-            Phone <input type="text" name="phone"> <br>
-            Credit Card Number <input type="text" name="card_number"> <br>
-            Expiration date<input type="month" name="date" placeholder="Month/Year"> <br>
-            Secure Code <input type="text" name="code"><br>
-			User ID <input type="text" id = "uid" disabled><br>
-            <input type="submit" value="Register">
-        </section>
-        <section>
-			<div id = "camera">
-				<video id ="video">Video not available.</video><br>
-				<button id ="takePhoto">Take Photo</button>
-			</div>
-			
-			<canvas id ="canvas" style ="display: none"></canvas>
-			<div id ="output" style = "display: none">
-				<img id ="photo"></img>
-			</div>
-        </section>
-       
+    <form action="register.php" method ="get">
+		<section class="logo">
+			<img src="images/logo1.png" class="center">
+		</section>
+		<section class="main">
+			<section class="content">
+				<section class="left">
+					<div  >
+						<table class="center">
+							<tr>
+								<td><input type="text" name="name" id = "name" placeholder="Name"></td>
+							</tr>
+							<tr>
+								<td><input type="email" name="email" placeholder="Email"></td>
+							</tr>
+							<tr>
+								<td><input type="text" name="address" id = "hello" placeholder="Address"></td>
+							</tr>
+							<tr>
+								<td><input type="text" name="phone" placeholder="Phone"></td>
+							</tr>
+							<tr>
+								<td><input type="text" name="card_number" placeholder="Credit Card Number"></td>
+							</tr>
+							<tr>
+								<td><input type="month" name="date" placeholder="Month/Year" placeholder="Expiration date"></td>
+							</tr>
+							<tr>
+								<td><input type="text" name="code" placeholder="Secure Code"></td>
+							</tr>
+						</table>
+					</div>
+					
+					<div class="button-wrapper">
+						<input type="submit" value="REGISTER" class="center button">
+						<input type="text" name = "uid" id = "uid" class="hide" required>
+					</div>
+					
+				</section>
+				<section class="right">
+					<div id = "camera">
+						<video id ="video">Video not available.</video><br>
+						<button id ="takePhoto" class="center">Take Photo</button>
+					</div>
+					
+					<canvas id ="canvas" style ="display: none"></canvas>
+					<div id ="output" style = "display: none">
+						<img id ="photo"></img>
+					</div>
+				</section>
+			</section>
+		    
+				
+		</section>
     </form>
 </body>
 </html>
