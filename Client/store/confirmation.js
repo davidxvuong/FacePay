@@ -1,5 +1,6 @@
 var delimiter = "EOD";
 var ws;
+var sendData;
 
 function initialize() {
 	console.log(sessionStorage.getItem("item"));
@@ -38,6 +39,14 @@ function processPayment() {
 	
 	ws.onmessage = function(evt) {
 		console.log(evt.data);
+		if (evt.data.indexOf("Success") != -1) {
+			ws.close();
+			console.log("move to next window!");
+		}
+		else {
+			console.log("Sending transaction info");
+			ws.send(sendData);
+		}
 	};
 	
 	ws.onerror = function(err) {
@@ -48,7 +57,6 @@ function processPayment() {
 		console.log("Closed connection");
 	};
 	
-	var sendData = cardNum + ";" + cardHolder + ";" + expDate + ";" + cvv + ";" + amount + delimiter;
+	sendData = cardNum + ";" + cardHolder + ";" + expDate + ";" + cvv + ";" + amount + delimiter;
 	
-	ws.send(sendData);
 }

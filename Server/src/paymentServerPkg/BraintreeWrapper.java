@@ -33,7 +33,7 @@ public class BraintreeWrapper {
 		
 		if (result.isSuccess()) {
 			Transaction txn = result.getTarget();
-			return txn.getId();
+			return "Success!" + txn.getId();
 		}
 		else {
 			return "Failed";

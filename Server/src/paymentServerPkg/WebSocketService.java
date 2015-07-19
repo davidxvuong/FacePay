@@ -55,7 +55,7 @@ public class WebSocketService extends Thread {
 			nameOfClient = decodeMessage(buffer);
 			System.out.println(String.format("%1$s: %2$s connected!",getDateTime(), nameOfClient));
 			
-			//out.write(encodeMessage("Java"));
+			out.write(encodeMessage("Java"));
 			listenForMessage();
 			
 		} catch (Exception e) {
