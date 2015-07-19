@@ -140,6 +140,12 @@ function recognizeCallback(data) {
 
 function queryComplete(data) {
 	console.log(data);
+	console.log(data.currentTarget.response);
+	var json = jQuery.parseJSON(data.currentTarget.response);
+	console.log(json);
+	
+	sessionStorage.setItem("queryData", data.currentTarget.response);
+	window.location.href ="confirmation.html";
 }
 function queryError(event) {
 	console.log("Error in query");
