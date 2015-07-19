@@ -19,4 +19,5 @@ echo "It worked";
 
 $sql = 'INSERT INTO fpdb  (userName, email, adrs, pn, ccn, exp, cvn, uid) 
 VALUES ('.$name.', '.$email.', '.$address.', '.$phone.', '.$creditCardNumber.', '.$expDate.', '.$secureCode.', '.$uid.')';
+$conn->query($sql);
 ?>
