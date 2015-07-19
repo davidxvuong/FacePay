@@ -3,18 +3,38 @@
 		<title>Payment</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script type = "text/javascript" src ="payment.js"></script>
+		<link rel="stylesheet" type="text/css" href="payment.css">
 	</head>
 	
 	<body onload = "initialize()">
-		<div id = "videoDiv">
-			<video id = "video">Video not available</video>
-			<button id ="takePhoto">Take Photo</button>
-		</div>
-		<canvas id="canvas" style ="display:none;"></canvas>
-			
-		<div id = "output">
-			<img id="photo"></img>
-		</div>
-		
+		<section class="logo">
+			<img src="images/logo1.png" class="center">
+		</section>
+
+		<section class="main">
+			<section class="content">
+				<ul>
+					<li>
+						<div id = "videoDiv">
+							<video id = "video" class="center">Video not available</video>
+						</div>
+					</li>
+					<li>
+						<canvas id="canvas" style ="display:none;" class="center"></canvas>
+					</li>
+					<li>
+						<div id = "output" style ="display:none;" class="center">
+							<img id="photo"></img>
+						</div>
+					</li>
+				</ul>
+			</section>
+		</section>
+
+		<section class="footer">
+			<div class="button-wrapper">
+				<button id ="takePhoto" class="center button pic">VERIFY</button>
+			</div>
+		</section>
 	</body>
 </html>
