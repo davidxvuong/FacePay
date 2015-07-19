@@ -52,15 +52,24 @@ body{
 }
 
 .button{
-	width:200px;
+	width:80%;
 	height: 50px;
-	background-color: #FFE64D;
 	border:none;
 	font-weight: 100;
 	font-size: 130%;
-	color:white;
-	text-shadow: 1px 1px 1px #BDA40D; 
 }
+	.button.reg{
+		background-color: #FFE64D;
+		color:white;
+		text-shadow: 1px 1px 1px #BDA40D; 
+	}
+	
+	.button.pic{
+		background-color: #4D6CA3;
+		color:white;
+		text-shadow: 1px 1px 1px #686473; 
+	}
+	
 	.button-wrapper{
 		margin: 20px;
 	}
@@ -74,10 +83,6 @@ body{
    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-#canvas, #camera{
-	background-color: white;
-}
-
-#camera{
-	margin: 15%;
+#video{
+	margin-left: 20px;
 }
