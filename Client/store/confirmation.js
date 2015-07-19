@@ -43,7 +43,7 @@ function processPayment() {
 			ws.close();
 			console.log("move to next window!");
 			sessionStorage.setItem("returnMsg", evt.data);
-			//move to next window
+			window.location.href ="done.html";
 		}
 		else {
 			console.log("Sending transaction info");
