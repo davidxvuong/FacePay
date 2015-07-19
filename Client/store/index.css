@@ -2,7 +2,12 @@ body{
 	margin:0px;
 	background-color: #0C141F;
 }
-
+.titles{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: 100;
+	font-size: 130%;
+	color: #ffffff;
+}
 .main{
 	background: linear-gradient(#0C141F, #01050A);
 	width:100%;

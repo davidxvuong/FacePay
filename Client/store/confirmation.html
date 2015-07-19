@@ -13,7 +13,8 @@
 	<section class="main">
 			<section class="content">
 		<p>Please confirm the details below, and click 'Continue'.</p>
-		<div>
+		<div class="titles">
+		
 			Name: <input type = "text" id ="userName" disabled><br>
 			Address: <input type ="text" id = "address" disabled><br>
 			Phone: <input type ="text" id = "phone" disabled><br>
@@ -25,7 +26,10 @@
 			Cost: <input type = "text" id = "cost" disabled<br>
 		</div>
 		
-		<button onclick = "processPayment()">Continue</button>
+		<div class="button-wrapper">
+						<input type="submit" onclick = "processPayment()" value="Continue" class="center button reg">
+						
+		</div>
 		</section></section>
 	</body>
 </html>
