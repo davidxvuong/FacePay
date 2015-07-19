@@ -13,7 +13,7 @@ $expDate = $_GET["date"];
 $secureCode = $_GET["code"];
 $uid = $_GET["uid"];
 
-$con = mysql_connect($server, $user, $pass) or die("Can't connect");
+$conn = mysql_connect($server, $user, $pass) or die("Can't connect");
 mysql_select_db($dbname);
 echo "It worked";
 
