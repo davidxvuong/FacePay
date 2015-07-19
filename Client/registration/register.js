@@ -5,7 +5,7 @@ var photo = null;
 var takePhoto  = null;
 var outputDiv = null;
 var width = 300;
-var height = 300;
+var height = 200;
 var API_KEY = "5305005f8dd2426696adedfb6b159da1";
 var API_SECRET = "325e64602e874234af4d833e073e6f99";
 var uid;
@@ -85,7 +85,7 @@ function takePicture() {
 	formData.append("imgData", data);
 
 	var newFile = new XMLHttpRequest();
-	newFile.addEventListener("load", performFaceRecognition, false);
+	newFile.addEventListener("load", performFacialDetection, false);
 	newFile.addEventListener("error", uploadError, false);
 	newFile.addEventListener("abort", uploadCancelled, false);
 	
@@ -93,7 +93,7 @@ function takePicture() {
 	newFile.send(formData);
 }
 
-function performFaceRecognition(event) { 
+function performFacialDetection(event) { 
 	console.log(event.target.responseText);
 
 	$.get("http://api.skybiometry.com/fc/faces/detect.json?api_key=" + API_KEY + "&api_secret=" + API_SECRET + "&urls=http://davidvuong.ca/BattleHackToronto/Client/registration/images/" + event.target.responseText, performFaceTraining);
