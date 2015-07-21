@@ -10,6 +10,7 @@ We implemented this system using various APIs and technologies as follows:
 - [SkyBiometry API](http://skybiometry.com/) - Used to perform facial detection, and recognition. This also serves as the "key" in which we retrieve credit card informations from registered users in our database.
 - [Braintree API](https://developers.braintreepayments.com/) - Used to perform the transaction for the user.
 - [WebRTC](http://www.webrtc.org/) - Used to provide the web browser access to the user's webcam.
+- [WebSockets] (https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) - Used to communicate with the web client and the Braintree server to process payments.
 
 ##Demonstration
 
